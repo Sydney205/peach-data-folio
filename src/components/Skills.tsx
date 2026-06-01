@@ -16,7 +16,7 @@ export function Skills() {
     {
       title: "Languages",
       icon: <Code2 className="text-accent" />,
-      skills: ["Python", "R", "SQL", "Scala", "Java"],
+      skills: ["Python", "R", "SQL", "Java", "C++"],
     },
     {
       title: "ML Frameworks",
