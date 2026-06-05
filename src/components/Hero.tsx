@@ -23,8 +23,8 @@ export function Hero() {
             <span className="text-accent underline decoration-accent/30 underline-offset-8">SYDNEY</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-10 max-w-lg leading-relaxed">
-            I transform complex datasets into actionable strategies. 
-            Specializing in Machine Learning, Statistical Analysis, and Visual Storytelling.
+            Data Science student passionate about building AI agents and intelligent systems that improve online education. 
+            I turn learning data into actionable insights and explain complex AI concepts through clear technical writing.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
