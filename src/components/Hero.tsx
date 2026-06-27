@@ -18,9 +18,9 @@ export function Hero() {
             Available for New Projects
           </div>
           <h1 className="text-6xl md:text-8xl font-black leading-tight tracking-tighter mb-6">
-            HOLA!, <br />
-            CALL ME <br />
-            <span className="text-accent underline decoration-accent/30 underline-offset-8">SYDNEY</span>
+            TURNING, <br />
+            DATA INTO <br />
+            <span className="text-accent underline decoration-accent/30 underline-offset-8">INSIGHT</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-10 max-w-lg leading-relaxed">
             Data Science student passionate about building AI agents and intelligent systems that improve online education. 
