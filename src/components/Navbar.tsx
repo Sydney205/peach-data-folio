@@ -31,7 +31,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 group">
           <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
-            <Database className="text-accent-foreground w-6 h-6" />
+            <img src="/1782544110932.png" />
           </div>
           <span className="font-bold text-xl tracking-tighter">SYDNEY<span className="text-accent">205</span></span>
         </a>

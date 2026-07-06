@@ -18,7 +18,7 @@ export function Hero() {
             Available for New Projects
           </div>
           <h1 className="text-6xl md:text-8xl font-black leading-tight tracking-tighter mb-6">
-            TURNING, <br />
+            TURNING <br />
             DATA INTO <br />
             <span className="text-accent underline decoration-accent/30 underline-offset-8">INSIGHT</span>
           </h1>
@@ -65,7 +65,7 @@ export function Hero() {
         >
           <div className="relative z-10 rounded-[2rem] overflow-hidden border-8 border-background shadow-2xl">
             <img
-              src="https://storage.googleapis.com/dala-prod-public-storage/attachments/09cc703e-ba10-448a-a9bb-f8bf7cc6cfb7/1780243919346_-ig5q1e.jpg"
+              src="/Sydney205.png"
               alt="Data Scientist"
               className="w-full h-full object-cover"
             />

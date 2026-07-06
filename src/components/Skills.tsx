@@ -6,9 +6,9 @@ import {
   LineChart, 
   Layers, 
   Cpu, 
-  TrendingUp, 
   PieChart, 
-  Zap 
+  Zap,
+  Monitor
 } from "lucide-react";
 
 export function Skills() {
@@ -16,17 +16,17 @@ export function Skills() {
     {
       title: "Languages",
       icon: <Code2 className="text-accent" />,
-      skills: ["Python", "R", "SQL", "Java", "C++"],
+      skills: ["Python", "SQL", "Javascript", "Typescript", "Rust", "Lua"],
     },
     {
-      title: "ML Frameworks",
-      icon: <Cpu className="text-accent" />,
-      skills: ["PyTorch", "TensorFlow", "Scikit-Learn", "XGBoost", "Keras"],
+      title: "Web Development",
+      icon: <Layers className="text-accent" />, 
+      skills: ["React", "Next.js", "Node.js", "Express", "MongoDB", "TailwindCSS"],
     },
     {
-      title: "Data Analysis",
-      icon: <LineChart className="text-accent" />,
-      skills: ["Pandas", "NumPy", "Spark", "Dask", "Tidyverse"],
+      title: "Data Science & Stats",
+      icon: <Zap className="text-accent" />,
+      skills: ["Pandas", "NumPy", "A/B Testing", "Time Series", "Hypothesis", "NLP"],
     },
     {
       title: "Visualization",
@@ -34,14 +34,14 @@ export function Skills() {
       skills: ["Tableau", "PowerBI", "Matplotlib", "Seaborn", "D3.js"],
     },
     {
-      title: "Engineering",
-      icon: <Layers className="text-accent" />,
-      skills: ["AWS", "GCP", "Docker", "Airflow", "MLflow"],
+      title: "ML Frameworks",
+      icon: <Cpu className="text-accent" />,
+      skills: ["PyTorch", "TensorFlow", "Scikit-Learn", "XGBoost", "Keras"],
     },
     {
-      title: "Statistics",
-      icon: <Zap className="text-accent" />,
-      skills: ["Bayesian", "A/B Testing", "Time Series", "Hypothesis", "NLP"],
+      title: "AI Agents & Intelligence",
+      icon: <Database className="text-accent" />,
+      skills: ["LangChain", "Gemini API", "Google AI Studio", "CrewAI", "Vector DBs"],
     },
   ];
 

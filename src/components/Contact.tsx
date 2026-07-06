@@ -63,15 +63,15 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-background/40 uppercase tracking-widest">Email Me</p>
-                  <p className="text-lg font-bold">hello@datadriven.com</p>
+                  <p className="text-lg font-bold">diekechi@gmail.com</p>
                 </div>
               </a>
               <div className="flex gap-4 pt-6">
                 {[
-                  { icon: <Github size={24} />, href: "#" },
-                  { icon: <Linkedin size={24} />, href: "#" },
-                  { icon: <Twitter size={24} />, href: "#" },
-                  { icon: <MessageSquare size={24} />, href: "#" },
+                  { icon: <Github size={24} />, href: "https://github.com/Sydney205" },
+                  { icon: <Linkedin size={24} />, href: "https://www.linkedin.com/in/chinedu-dieke-4860b2247" },
+                  { icon: <Twitter size={24} />, href: "https://x.com/Sydney2O5" },
+                  { icon: <MessageSquare size={24} />, href: "sms:+2347079745372" },
                 ].map((social, i) => (
                   <a
                     key={i}

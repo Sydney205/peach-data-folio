@@ -6,12 +6,12 @@ import { ExternalLink, Github } from "lucide-react";
 export function Projects() {
   const projects = [
     {
-      title: "Predictive Health Analytics",
-      description: "A machine learning pipeline to predict patient outcomes using electronic health records and real-time biometric data.",
-      image: "https://storage.googleapis.com/dala-prod-public-storage/generated-images/645b5e8d-fc75-434f-889e-dfbd82380699/predictive-analytics-project-5324f7c5-1780244076088.webp",
-      tags: ["Python", "Scikit-Learn", "Healthcare"],
-      github: "#",
-      demo: "#"
+      title: "OULAD Student Dropout Prediction",
+      description: "Machine learning model that predicts student dropout risk in online learning using the OULAD dataset to enable early academic intervention.",
+      image: "/Raw_App_Screenshot.png",
+      tags: ["Python", "Scikit-Learn", "Education"],
+      github: "https://github.com/Sydney205/oulad-student-dropout-prediction",
+      demo: "https://oulad-student-dropout-prediction-fimjvpb9oevwbavuwniqx3.streamlit.app/"
     },
     {
       title: "Global Supply Chain Optimizer",

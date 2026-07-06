@@ -23,10 +23,15 @@ export function About() {
                 transition={{ delay: 0.1 }}
                 className="text-xl md:text-2xl font-medium leading-relaxed mb-8 text-background/80"
               >
-                I am a Data Scientist driven by the philosophy that 
-                <span className="text-accent"> everything is a variable</span>. 
-                Whether it's optimizing conversion rates or predicting market trends, 
-                I find the signal within the noise.
+                I am a Data Scientist who believes
+                <span className="text-accent">
+                  {" "}
+                  insights are meant to be acted upon. {" "}
+                </span>
+                I bridge the gap between analysis and action by using AI
+                agents to execute decisions derived from data workflows. Beyond
+                engineering solutions, I’m passionate about technical writing,
+                breaking down complex systems into clear, accessible concepts.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -35,9 +40,7 @@ export function About() {
                 transition={{ delay: 0.2 }}
                 className="text-lg leading-relaxed text-background/60"
               >
-                With over 5 years of experience in statistical modeling and machine learning, 
-                I bridge the gap between technical complexity and business value. 
-                My approach is rooted in the "Data Driven" mindset—letting the evidence lead the way.
+                gh
               </motion.p>
             </div>
             <div className="md:col-span-2 space-y-8">
@@ -48,7 +51,9 @@ export function About() {
                 className="p-6 border border-background/10 rounded-2xl bg-background/5"
               >
                 <h3 className="text-accent font-black text-4xl mb-2">5+</h3>
-                <p className="font-bold text-sm tracking-widest text-background/40">YEARS OF RESEARCH</p>
+                <p className="font-bold text-sm tracking-widest text-background/40">
+                  YEARS OF RESEARCH
+                </p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -58,7 +63,9 @@ export function About() {
                 className="p-6 border border-background/10 rounded-2xl bg-background/5"
               >
                 <h3 className="text-accent font-black text-4xl mb-2">50+</h3>
-                <p className="font-bold text-sm tracking-widest text-background/40">MODELS DEPLOYED</p>
+                <p className="font-bold text-sm tracking-widest text-background/40">
+                  MODELS DEPLOYED
+                </p>
               </motion.div>
             </div>
           </div>
