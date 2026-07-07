@@ -18,7 +18,7 @@ export function Footer() {
             <a href="#about" className="hover:text-accent transition-colors">About</a>
             <a href="#skills" className="hover:text-accent transition-colors">Skills</a>
             <a href="#projects" className="hover:text-accent transition-colors">Projects</a>
-            <a href="#experience" className="hover:text-accent transition-colors">Experience</a>
+            {/* <a href="#experience" className="hover:text-accent transition-colors">Experience</a> */}
             <a href="#contact" className="hover:text-accent transition-colors">Contact</a>
           </div>
           

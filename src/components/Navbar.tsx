@@ -18,7 +18,7 @@ export function Navbar() {
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
-    { name: "Experience", href: "#experience" },
+    // { name: "Experience", href: "#experience" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -86,10 +86,10 @@ export function Navbar() {
               ))}
               <a
                 href="#contact"
-                className="w-full text-center py-4 bg-accent text-accent-foreground rounded-xl font-bold text-lg"
+                className="w-full text-center py-4 bg-foreground text-background rounded-xl font-bold text-lg"
                 onClick={() => setIsOpen(false)}
               >
-                Get Started
+                Let's Talk!
               </a>
             </div>
           </motion.div>

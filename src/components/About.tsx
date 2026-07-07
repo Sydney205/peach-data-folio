@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ArrowUpRight, FileText } from "lucide-react";
 
 export function About() {
   return (
@@ -11,28 +12,33 @@ export function About() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-black mb-12 flex items-center gap-4"
           >
-            <span className="text-accent">01.</span> THE MISSION
+            <span className="text-accent">01.</span> WHO AM I
           </motion.h2>
 
-          <div className="grid md:grid-cols-5 gap-12">
+          <div className="grid md:grid-cols-5 gap-12 items-center">
+            {/* Main Bio Text */}
             <div className="md:col-span-3">
-              <motion.p
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-xl md:text-2xl font-medium leading-relaxed mb-8 text-background/80"
+                className="mb-6"
               >
-                I am a Data Scientist who believes
-                <span className="text-accent">
-                  {" "}
-                  insights are meant to be acted upon. {" "}
+                <h3 className="text-2xl md:text-3xl font-medium text-background/80 leading-tight">
+                  Hello, call me <span className="text-accent font-black text-3xl md:text-4xl">Sydney</span>
+                </h3>
+                <span className="text-xs md:text-sm font-mono tracking-wider text-background/70 block mt-1">
+                  [ CHINEDU DIEKE ]
                 </span>
-                I bridge the gap between analysis and action by using AI
-                agents to execute decisions derived from data workflows. Beyond
-                engineering solutions, I’m passionate about technical writing,
-                breaking down complex systems into clear, accessible concepts.
-              </motion.p>
+                <p className="text-xl md:text-2xl font-medium leading-relaxed mt-4 text-background/80">
+                  I am an aspiring Data Scientist who believes{" "}
+                  <span className="text-accent font-semibold">
+                    insights are meant to be acted upon.
+                  </span>
+                </p>
+              </motion.div>
+              
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -40,32 +46,40 @@ export function About() {
                 transition={{ delay: 0.2 }}
                 className="text-lg leading-relaxed text-background/60"
               >
-                gh
+                I focus on bridging the gap between deep analysis and tangible action, using AI agents to execute data-driven decisions. Beyond engineering models and workflows, I am passionate about technical writing, breaking down complex systems and dense documentation into clear, accessible concepts.
               </motion.p>
             </div>
-            <div className="md:col-span-2 space-y-8">
+
+            {/* CV Download */}
+            <div className="md:col-span-2 space-y-6">
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="p-6 border border-background/10 rounded-2xl bg-background/5"
+                transition={{ delay: 0.2 }}
+                className="p-8 border border-background/10 rounded-2xl bg-background/5 flex flex-col justify-between h-full group hover:border-accent/30 transition-colors duration-300"
               >
-                <h3 className="text-accent font-black text-4xl mb-2">5+</h3>
-                <p className="font-bold text-sm tracking-widest text-background/40">
-                  YEARS OF RESEARCH
-                </p>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="p-6 border border-background/10 rounded-2xl bg-background/5"
-              >
-                <h3 className="text-accent font-black text-4xl mb-2">50+</h3>
-                <p className="font-bold text-sm tracking-widest text-background/40">
-                  MODELS DEPLOYED
-                </p>
+                <div>
+                  <div className="p-3 bg-background/5 rounded-xl w-fit mb-6 text-accent">
+                    <FileText size={28} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-background/90">
+                    Curriculum Vitae
+                  </h3>
+                  <p className="text-sm text-background/50 mb-8 leading-relaxed">
+                    Explore my academic background, technical projects, and full toolset in detail.
+                  </p>
+                </div>
+                
+                <a
+                  href="/path-to-your-cv.pdf"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between w-full px-5 py-4 bg-background text-foreground font-bold rounded-xl hover:bg-accent hover:text-background transition-all duration-300 shadow-sm"
+                >
+                  <span>View CV</span>
+                  <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </a>
               </motion.div>
             </div>
           </div>

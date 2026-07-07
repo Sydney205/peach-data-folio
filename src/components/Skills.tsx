@@ -41,7 +41,7 @@ export function Skills() {
     {
       title: "AI Agents & Intelligence",
       icon: <Database className="text-accent" />,
-      skills: ["LangChain", "Gemini API", "Google AI Studio", "CrewAI", "Vector DBs"],
+      skills: ["Gemini API", "Google AI Studio"],
     },
   ];
 

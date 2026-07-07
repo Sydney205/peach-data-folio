@@ -13,30 +13,6 @@ export function Projects() {
       github: "https://github.com/Sydney205/oulad-student-dropout-prediction",
       demo: "https://oulad-student-dropout-prediction-fimjvpb9oevwbavuwniqx3.streamlit.app/"
     },
-    {
-      title: "Global Supply Chain Optimizer",
-      description: "Deep learning model for optimizing logistics and reducing carbon footprint across multi-continent supply routes.",
-      image: "https://storage.googleapis.com/dala-prod-public-storage/generated-images/645b5e8d-fc75-434f-889e-dfbd82380699/machine-learning-project-9eb5dc62-1780244075124.webp",
-      tags: ["Deep Learning", "PyTorch", "Logistics"],
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "FinTech Market Sentiment",
-      description: "NLP engine analyzing millions of social media posts and news articles to predict stock market volatility.",
-      image: "https://storage.googleapis.com/dala-prod-public-storage/generated-images/645b5e8d-fc75-434f-889e-dfbd82380699/data-analysis-project-75f692f6-1780244075969.webp",
-      tags: ["NLP", "Transformers", "Finance"],
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "Real-time Fraud Detection",
-      description: "Anomaly detection system processing 10k transactions/sec with 99.9% accuracy using streaming data architectures.",
-      image: "https://storage.googleapis.com/dala-prod-public-storage/generated-images/645b5e8d-fc75-434f-889e-dfbd82380699/data-visualization-project-e3ae5a02-1780244075495.webp",
-      tags: ["Spark", "Kafka", "Security"],
-      github: "#",
-      demo: "#"
-    }
   ];
 
   return (

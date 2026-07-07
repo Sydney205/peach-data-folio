@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -14,7 +15,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Github, Linkedin, Twitter, MessageSquare } from "lucide-react";
+import { Mail, Github, Linkedin, Twitter, MessageSquare, Loader2 } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -23,25 +24,45 @@ const formSchema = z.object({
 });
 
 export function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
+    defaultValues: { name: "", email: "", message: "" },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast.success("Message sent! I'll get back to you soon.");
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mpqgeaqn", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        toast.success("Message sent! I'll get back to you soon.");
+        form.reset();
+      } else {
+        throw new Error("Formspree submission failed");
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to send message. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
     <section id="contact" className="py-24 bg-foreground text-background">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-20 max-w-6xl mx-auto">
+          {/* Left column stays exactly the same as your original design */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -57,7 +78,7 @@ export function Contact() {
             </p>
 
             <div className="space-y-6">
-              <a href="mailto:hello@datadriven.com" className="flex items-center gap-4 group">
+              <a href="mailto:diekechi@gmail.com" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-xl bg-background/5 border border-background/10 flex items-center justify-center group-hover:bg-accent group-hover:text-accent-foreground transition-all">
                   <Mail size={24} />
                 </div>
@@ -85,6 +106,7 @@ export function Contact() {
             </div>
           </motion.div>
 
+          {/* Form UI */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -100,11 +122,7 @@ export function Contact() {
                     <FormItem>
                       <FormLabel className="text-background/60 font-bold uppercase tracking-widest text-xs">Full Name</FormLabel>
                       <FormControl>
-                        <Input
-                          placeholder="John Doe"
-                          {...field}
-                          className="bg-background/5 border-background/10 text-background h-14 rounded-xl focus:border-accent transition-colors"
-                        />
+                        <Input placeholder="John Doe" {...field} disabled={isSubmitting} className="bg-background/5 border-background/10 text-background h-14 rounded-xl focus:border-accent transition-colors" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -117,11 +135,7 @@ export function Contact() {
                     <FormItem>
                       <FormLabel className="text-background/60 font-bold uppercase tracking-widest text-xs">Email Address</FormLabel>
                       <FormControl>
-                        <Input
-                          placeholder="john@example.com"
-                          {...field}
-                          className="bg-background/5 border-background/10 text-background h-14 rounded-xl focus:border-accent transition-colors"
-                        />
+                        <Input placeholder="john@example.com" {...field} disabled={isSubmitting} className="bg-background/5 border-background/10 text-background h-14 rounded-xl focus:border-accent transition-colors" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -134,11 +148,7 @@ export function Contact() {
                     <FormItem>
                       <FormLabel className="text-background/60 font-bold uppercase tracking-widest text-xs">Project Details</FormLabel>
                       <FormControl>
-                        <Textarea
-                          placeholder="Tell me about your data challenge..."
-                          {...field}
-                          className="bg-background/5 border-background/10 text-background min-h-[150px] rounded-xl focus:border-accent transition-colors resize-none"
-                        />
+                        <Textarea placeholder="Tell me about your data challenge..." {...field} disabled={isSubmitting} className="bg-background/5 border-background/10 text-background min-h-[150px] rounded-xl focus:border-accent transition-colors resize-none" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -146,9 +156,17 @@ export function Contact() {
                 />
                 <Button
                   type="submit"
-                  className="w-full h-14 bg-accent text-accent-foreground hover:bg-accent/90 rounded-xl font-black text-lg transition-transform hover:scale-[1.02]"
+                  disabled={isSubmitting}
+                  className="w-full h-14 bg-accent text-accent-foreground hover:bg-accent/90 rounded-xl font-black text-lg transition-all hover:scale-[1.02] flex items-center justify-center gap-2"
                 >
-                  SEND SIGNAL
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="animate-spin" size={20} />
+                      TRANSMITTING...
+                    </>
+                  ) : (
+                    "SEND SIGNAL"
+                  )}
                 </Button>
               </form>
             </Form>
