@@ -35,7 +35,7 @@ export function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formspree.io/f/mpqgeaqn", {
+      const response = await fetch(`${import.meta.env.VITE_EMAILFORMSPREE_ID}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
