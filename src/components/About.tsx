@@ -26,27 +26,41 @@ export function About() {
                 className="mb-6"
               >
                 <h3 className="text-2xl md:text-3xl font-medium text-background/80 leading-tight">
-                  Hello, call me <span className="text-accent font-black text-3xl md:text-4xl">Sydney</span>
+                  Hello, call me{" "}
+                  <span className="text-accent font-black text-3xl md:text-4xl">
+                    Sydney
+                  </span>
                 </h3>
                 <span className="text-xs md:text-sm font-mono tracking-wider text-background/70 block mt-1">
                   [ CHINEDU DIEKE ]
                 </span>
                 <p className="text-xl md:text-2xl font-medium leading-relaxed mt-4 text-background/80">
-                  I am an aspiring Data Scientist who believes{" "}
+                  I am a Data Scientist and Web Developer who believes{" "}
                   <span className="text-accent font-semibold">
-                    insights are meant to be acted upon.
+                    insights are meant to be engineered into action.
                   </span>
                 </p>
               </motion.div>
-              
+
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="text-lg leading-relaxed text-background/60"
+                className="text-lg leading-relaxed text-background/60 space-y-4"
               >
-                I focus on bridging the gap between deep analysis and tangible action, using AI agents to execute data-driven decisions. Beyond engineering models and workflows, I am passionate about technical writing, breaking down complex systems and dense documentation into clear, accessible concepts.
+                <span>
+                  I bridge the gap between raw statistical analysis and functional production software. 
+                  Currently completing my BSc in Data Science at Miva Open University, my practice spans 
+                  training intelligent models and building full-stack web architectures (MERN & Next.js) 
+                  to operationalize data. From deploying predictive ML interfaces to engineering regional 
+                  hydrological data workflows, I focus on building software that solves concrete problems.
+                </span>
+                <br /><br />
+                <span>
+                  Beyond training models and writing code, I am deeply committed to technical writing—translating 
+                  dense documentation and complex machine learning pipelines into clean, accessible concepts.
+                </span>
               </motion.p>
             </div>
 
@@ -67,18 +81,21 @@ export function About() {
                     Curriculum Vitae
                   </h3>
                   <p className="text-sm text-background/50 mb-8 leading-relaxed">
-                    Explore my academic background, technical projects, and full toolset in detail.
+                    Explore my academic history, certified technical milestones, and complete full-stack toolset.
                   </p>
                 </div>
-                
+
                 <a
-                  href="/path-to-your-cv.pdf"
-                  target="_blank" 
+                  href="/CHINEDU SYDNEY DIEKE.pdf"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between w-full px-5 py-4 bg-background text-foreground font-bold rounded-xl hover:bg-accent hover:text-background transition-all duration-300 shadow-sm"
                 >
                   <span>View CV</span>
-                  <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  <ArrowUpRight
+                    size={18}
+                    className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                  />
                 </a>
               </motion.div>
             </div>

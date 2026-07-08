@@ -1,103 +1,104 @@
 import { motion } from "framer-motion";
-import { ArrowRight, BarChart3, Binary, BrainCircuit } from "lucide-react";
+import { ArrowUpRight, FileText } from "lucide-react";
 
-export function Hero() {
+export function About() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent font-mono text-xs mb-6">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
-            </span>
-            Available for New Projects
-          </div>
-          <h1 className="text-6xl md:text-8xl font-black leading-tight tracking-tighter mb-6">
-            TURNING <br />
-            DATA INTO <br />
-            <span className="text-accent underline decoration-accent/30 underline-offset-8">INSIGHT</span>
-          </h1>
-          <p className="text-xl text-muted-foreground mb-10 max-w-lg leading-relaxed">
-            Data Science student passionate about building AI agents and intelligent systems that improve online education. 
-            I turn learning data into actionable insights and explain complex AI concepts through clear technical writing.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <a
-              href="#projects"
-              className="px-8 py-4 bg-foreground text-background rounded-full font-bold flex items-center gap-2 hover:scale-105 transition-transform"
-            >
-              View Work <ArrowRight size={20} />
-            </a>
-            <a
-              href="#about"
-              className="px-8 py-4 bg-accent/10 border border-accent/20 text-foreground rounded-full font-bold hover:bg-accent/20 transition-colors"
-            >
-              My Story
-            </a>
-          </div>
-
-          <div className="mt-16 flex items-center gap-8 grayscale opacity-50">
-            <div className="flex items-center gap-2">
-              <Binary size={24} />
-              <span className="font-bold text-sm">ANALYTICS</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <BrainCircuit size={24} />
-              <span className="font-bold text-sm">AI MODELS</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <BarChart3 size={24} />
-              <span className="font-bold text-sm">STRATEGY</span>
-            </div>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="relative"
-        >
-          <div className="relative z-10 rounded-[2rem] overflow-hidden border-8 border-background shadow-2xl">
-            <img
-              src="/Sydney205.png"
-              alt="Data Scientist"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          {/* Decorative elements */}
-          <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent/20 rounded-full blur-3xl z-0 animate-pulse"></div>
-          <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-accent/10 rounded-full blur-2xl z-0"></div>
-          
-          <motion.div 
-            animate={{ y: [0, -20, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-1/4 -right-12 z-20 bg-background/90 backdrop-blur-lg border border-border p-6 rounded-2xl shadow-xl hidden md:block"
+    <section id="about" className="py-24 bg-foreground text-background">
+      <div className="container mx-auto px-6">
+        <div className="max-w-4xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-black mb-12 flex items-center gap-4"
           >
-            <div className="flex items-center gap-4 mb-2">
-              <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
-                <BarChart3 className="text-accent-foreground" size={20} />
-              </div>
-              <div>
-                <p className="text-xs text-muted-foreground uppercase font-bold tracking-widest">Accuracy</p>
-                <p className="text-xl font-black">98.4%</p>
-              </div>
+            <span className="text-accent">01.</span> WHO AM I
+          </motion.h2>
+
+          <div className="grid md:grid-cols-5 gap-12 items-center">
+            {/* Main Bio Text */}
+            <div className="md:col-span-3 space-y-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-2xl md:text-3xl font-medium text-background/80 leading-tight">
+                  Hello, call me{" "}
+                  <span className="text-accent font-black text-3xl md:text-4xl">
+                    Sydney
+                  </span>
+                </h3>
+                <span className="text-xs md:text-sm font-mono tracking-wider text-background/70 block mt-1">
+                  [ CHINEDU DIEKE ]
+                </span>
+              </motion.div>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="text-lg leading-relaxed text-background/70"
+              >
+                I am a **Data Scientist and Web Developer** currently pursuing
+                my BSc at Miva Open University. I bridge the gap between
+                statistical analysis and production software by engineering
+                full-stack web architectures (MERN & Next.js) to operationalize
+                data and deploy intelligent ML systems.
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="text-base leading-relaxed text-background/50"
+              >
+                Beyond code, I focus on technical writing—breaking down dense
+                documentation and complex data pipelines into accessible,
+                concept-driven narratives.
+              </motion.p>
             </div>
-            <div className="w-full bg-muted h-2 rounded-full overflow-hidden">
-              <motion.div 
-                initial={{ width: 0 }}
-                animate={{ width: "98.4%" }}
-                transition={{ duration: 1.5, delay: 0.5 }}
-                className="bg-accent h-full"
-              ></motion.div>
+
+            {/* CV Download */}
+            <div className="md:col-span-2 h-full">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="p-8 border border-background/10 rounded-2xl bg-background/5 flex flex-col justify-between h-full group hover:border-accent/30 transition-colors duration-300"
+              >
+                <div>
+                  <div className="p-3 bg-background/5 rounded-xl w-fit mb-4 text-accent">
+                    <FileText size={24} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-background/90">
+                    Curriculum Vitae
+                  </h3>
+                  <p className="text-xs text-background/50 mb-6 leading-relaxed">
+                    Review my unified history of certified data projects and web
+                    engineering workflows.[span_1](start_span)[span_1](end_span)
+                  </p>
+                </div>
+
+                <a
+                  href="/CHINEDU SYDNEY DIEKE.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between w-full px-5 py-3 bg-background text-foreground font-bold rounded-xl hover:bg-accent hover:text-background transition-all duration-300 shadow-sm"
+                >
+                  <span>View CV</span>
+                  <ArrowUpRight
+                    size={18}
+                    className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                  />
+                </a>
+              </motion.div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );
