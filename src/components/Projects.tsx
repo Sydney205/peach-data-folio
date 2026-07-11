@@ -16,7 +16,7 @@ export function Projects() {
     {
       title: "DashLink",
       description: "A simple and efficient URL shortener that transforms long URLs into compact, shareable links. Features include custom aliases and easy integration for streamlined link management.",
-      image: "/public/6a5253abe494773e183ce34d.png",
+      image: "/6a5253abe494773e183ce34d.png",
       tags: ["pnpm", "vite", "Express", "short-links"],
       github: "https://github.com/Sydney205/DashLink",
       demo: "https://oulad-student-dropout-prediction-fimjvpb9oevwbavuwniqx3.streamlit.app/"
