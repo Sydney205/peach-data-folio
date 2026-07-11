@@ -23,7 +23,7 @@ export function Projects() {
     },
     {
       title: "Tico",
-      description: "A simple and efficient URL shortener that transforms long URLs into compact, shareable links. Features include custom aliases and easy integration for streamlined link management.",
+      description: "A real-time, browser-based chess platform that brings players together for instant matchmaking and competitive gameplay. Built for speed, accessibility, and smooth performance across all devices without requiring installations.",
       image: "/tico.png",
       tags: ["pnpm", "vite", "Express", "chess"],
       github: "https://github.com/Sydney205/Tico",
