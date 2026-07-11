@@ -19,7 +19,7 @@ export function Projects() {
       image: "/6a5253abe494773e183ce34d.png",
       tags: ["pnpm", "vite", "Express", "short-links"],
       github: "https://github.com/Sydney205/DashLink",
-      demo: "https://oulad-student-dropout-prediction-fimjvpb9oevwbavuwniqx3.streamlit.app/"
+      demo: "https://dashlink-5mnl.onrender.com"
     },
   ];
 
