@@ -22,14 +22,6 @@ export function Projects() {
       demo: "https://dashlink-5mnl.onrender.com"
     },
     {
-      title: "DashLink",
-      description: "A simple and efficient URL shortener that transforms long URLs into compact, shareable links. Features include custom aliases and easy integration for streamlined link management.",
-      image: "/6a5253abe494773e183ce34d.png",
-      tags: ["pnpm", "vite", "Express", "short-links"],
-      github: "https://github.com/Sydney205/DashLink",
-      demo: "https://dashlink-5mnl.onrender.com"
-    },
-    {
       title: "Tico",
       description: "A simple and efficient URL shortener that transforms long URLs into compact, shareable links. Features include custom aliases and easy integration for streamlined link management.",
       image: "/tico.png",
