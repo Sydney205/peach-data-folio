@@ -13,6 +13,14 @@ export function Projects() {
       github: "https://github.com/Sydney205/oulad-student-dropout-prediction",
       demo: "https://oulad-student-dropout-prediction-fimjvpb9oevwbavuwniqx3.streamlit.app/"
     },
+    {
+      title: "DashLink",
+      description: "A simple and efficient URL shortener that transforms long URLs into compact, shareable links. Features include custom aliases and easy integration for streamlined link management.",
+      image: "/Raw_App_Screenshot.png",
+      tags: ["pnpm", "vite", "Express" "short-links"],
+      github: "https://github.com/Sydney205/DashLink",
+      demo: "https://oulad-student-dropout-prediction-fimjvpb9oevwbavuwniqx3.streamlit.app/"
+    },
   ];
 
   return (
