@@ -21,7 +21,8 @@ export function Hero() {
             CORE <br />
             <span className="text-accent underline decoration-accent/30 underline-offset-8">
               CODE
-            </span> DECODED <br />
+            </span> <br />
+DECODED <br />
             <span className="text-accent underline decoration-accent/30 underline-offset-8">
               DATA
             </span>
