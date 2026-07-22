@@ -18,14 +18,23 @@ export function Hero() {
             Available for New Projects
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-black leading-tight tracking-tighter mb-6">
-            CORE{" "}
-            <span className="text-accent underline decoration-accent/30 underline-offset-8">
-              CODE
+          <h1
+            className="font-black leading-tight tracking-tighter mb-6"
+            style={{
+              fontSize: "clamp(3rem, 8vw, 8rem)",
+            }}
+          >
+            <span className="whitespace-nowrap">
+              CORE{" "}
+              <span className="text-accent underline decoration-accent/30 underline-offset-8">
+                CODE
+              </span>
             </span>
+
             <br />
 
             DECODED
+
             <br />
 
             <span className="text-accent underline decoration-accent/30 underline-offset-8">
@@ -89,22 +98,31 @@ export function Hero() {
           </div>
 
           <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent/20 rounded-full blur-3xl z-0 animate-pulse"></div>
+
           <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-accent/10 rounded-full blur-2xl z-0"></div>
 
           <motion.div
             animate={{ y: [0, -20, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
             className="absolute top-1/4 -right-12 z-20 bg-background/90 backdrop-blur-lg border border-border p-6 rounded-2xl shadow-xl hidden md:block"
           >
             <div className="flex items-center gap-4 mb-2">
               <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
-                <BarChart3 className="text-accent-foreground" size={20} />
+                <BarChart3
+                  className="text-accent-foreground"
+                  size={20}
+                />
               </div>
 
               <div>
                 <p className="text-xs text-muted-foreground uppercase font-bold tracking-widest">
                   Accuracy
                 </p>
+
                 <p className="text-xl font-black">98.4%</p>
               </div>
             </div>
@@ -113,9 +131,12 @@ export function Hero() {
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: "98.4%" }}
-                transition={{ duration: 1.5, delay: 0.5 }}
+                transition={{
+                  duration: 1.5,
+                  delay: 0.5,
+                }}
                 className="bg-accent h-full"
-              ></motion.div>
+              />
             </div>
           </motion.div>
         </motion.div>
