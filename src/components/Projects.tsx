@@ -16,7 +16,7 @@ export function Projects() {
     {
       title: "Skeleton Project",
       description: "SkelPro is a fast command-line tool that creates project structures from reusable JSON templates. It helps developers avoid repetitive setup tasks by generating consistent development environments.",
-      image: "/6a5253abe494773e183ce34d.png",
+      image: "/195749724.png",
       tags: ["Typescript", "Nodejs", "npm", "short-links"],
       github: "https://github.com/SkelPro/skelpro",
       demo: "https://npmjs.com/package/skelpro"
