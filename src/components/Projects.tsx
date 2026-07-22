@@ -14,6 +14,16 @@ export function Projects() {
       demo: "https://oulad-student-dropout-prediction-fimjvpb9oevwbavuwniqx3.streamlit.app/"
     },
     {
+      title: "Skeleton Project",
+      description: "SkelPro is a fast command-line tool that creates project structures from reusable JSON templates.
+It helps developers avoid repetitive setup tasks by generating consistent development environments in seconds.
+With built-in Git worktree support, SkelPro also enables developers and AI agents to work on isolated branches without interfering with the main project.",
+      image: "/6a5253abe494773e183ce34d.png",
+      tags: ["Typescript", "Nodejs", "npm", "short-links"],
+      github: "https://github.com/SkelPro/skelpro",
+      demo: "https://npmjs.com/package/skelpro"
+    },
+    {
       title: "DashLink",
       description: "A simple and efficient URL shortener that transforms long URLs into compact, shareable links. Features include custom aliases and easy integration for streamlined link management.",
       image: "/6a5253abe494773e183ce34d.png",
@@ -27,7 +37,7 @@ export function Projects() {
       image: "/tico.png",
       tags: ["pnpm", "vite", "Express", "chess"],
       github: "https://github.com/Sydney205/Tico",
-      demo: "https://dashlink-5mnl.onrender.com"
+      demo: "https://tico-vw9b.onrender.com/"
     },
   ];
 
