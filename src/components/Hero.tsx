@@ -18,14 +18,8 @@ export function Hero() {
             Available for New Projects
           </div>
           <h1 className="text-6xl md:text-8xl font-black leading-tight tracking-tighter mb-6">
-            CORE <br />
-            <span className="text-accent underline decoration-accent/30 underline-offset-8">
-              CODE
-            </span> <br />
-DECODED <br />
-            <span className="text-accent underline decoration-accent/30 underline-offset-8">
-              DATA
-            </span>
+            CORE <span className="text-accent underline decoration-accent/30 underline-offset-8">CODE</span> <br />
+            DECODED <span className="text-accent underline decoration-accent/30 underline-offset-8">DATA</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-10 max-w-lg leading-relaxed">
             Data Scientist and Web Developer specializing in building predictive
@@ -48,17 +42,17 @@ DECODED <br />
             </a>
           </div>
 
-          <div className="mt-16 flex items-center gap-8 grayscale opacity-50">
+          <div className="mt-16 flex items-center gap-8 opacity-75">
             <div className="flex items-center gap-2">
-              <Binary size={24} />
+              <Binary size={24} className="text-accent" />
               <span className="font-bold text-sm">DATA MODELING</span>
             </div>
             <div className="flex items-center gap-2">
-              <BrainCircuit size={24} />
+              <BrainCircuit size={24} className="text-accent" />
               <span className="font-bold text-sm">FULL-STACK ENG</span>
             </div>
             <div className="flex items-center gap-2">
-              <BarChart3 size={24} />
+              <BarChart3 size={24} className="text-accent" />
               <span className="font-bold text-sm">ANALYTICS</span>
             </div>
           </div>
