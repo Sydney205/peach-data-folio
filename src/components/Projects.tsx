@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 
@@ -61,21 +61,27 @@ export function Projects() {
           </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div
+          aria-label="Project portfolio"
+          className="flex snap-x snap-mandatory gap-6 overflow-x-auto overflow-y-hidden scroll-smooth pb-6"
+          role="region"
+          tabIndex={0}
+        >
           {projects.map((project, index) => (
             <motion.div
               key={index}
+              className="w-[min(86vw,36rem)] shrink-0 snap-start sm:w-[min(72vw,36rem)]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
               <Card className="overflow-hidden bg-background border-none shadow-xl group hover:-translate-y-2 transition-transform duration-500">
-                <div className="relative h-72 overflow-hidden">
+                <div className="relative aspect-video overflow-hidden bg-muted">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-110"
+                    className="h-full w-full object-contain grayscale transition-all duration-700 group-hover:grayscale-0"
                   />
                   <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
                     <a href={project.github} className="p-3 bg-background rounded-full hover:scale-110 transition-transform">
